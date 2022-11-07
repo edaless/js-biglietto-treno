@@ -60,3 +60,81 @@ font-family: 'Roboto', sans-serif;
     background-color: rgb(255, 255, 255);
 }
 
+.riga{
+    width: 100%;
+    height: 20px;
+
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: space-between;
+
+    /* border: 1px solid rgb(215, 207, 207); */
+    /* background-color: blue; */
+}
+
+
+.tre-quarti{
+    height: 75%;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    /* background-color: crimson; */
+}
+.quarto{
+    height: 25%;
+    justify-content: space-between;
+
+    
+    /* background-color: rgb(43, 5, 12); */
+}
+
+.grigia{
+    background-color: rgb(225, 225, 225);
+}
+.bianca{
+    background-color: aliceblue;
+}
+
+
+:root{
+    /* var(--w-colonna) */
+    --w-colonna: 130px;
+    
+}
+.colonna{
+    width: var(--w-colonna);
+    /* background-color: brown; */
+}
+.prezzi{
+    display: flex;
+    justify-content: end;
+    width: calc((var(--w-colonna) * 2) + 20px);
+
+    /* background-color: cyan; */
+}
+
+.red{
+    color: red;
+    text-decoration: line-through;
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+
+/************************************************
+    SOLUZIONE RESPONSIVE
+ ************************************************/
+
+
+
+ @media screen and (max-width: 768px){
+    .pannello{
+        width: 90%;
+    }
+ }
+
+
+ @media screen and (max-width: 480px){
+   
+ }

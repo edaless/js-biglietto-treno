@@ -11,10 +11,12 @@
 
 
 const prezzoKm = 0.21;
-const scontoMin = 0.8;
+const scontoMin = 20;
 const etaMin = 18;
-const scontoOver = 0.6;
+const scontoOver = 40;
 const etaOver = 65;
+
+let sconto = 0;
 
 
 // chiedo i km
@@ -26,30 +28,47 @@ let eta = parseInt( prompt("Quanti anni hai?"));
 console.log("eta:",eta);
 
 
-// calcolo il prezzo di listino
-let prezzo = (km * prezzoKm);
 
-
-
-
+// determino se c'è uno sconto
 // sconto minorenne
 if(eta < etaMin){
-    prezzo = prezzo * scontoMin;
+    sconto = scontoMin;
 }
 // sconto over
 if(eta >= etaOver){
-    prezzo = prezzo * scontoOver;
+    sconto = scontoOver;
 }
+
+console.log("sconto:", sconto);
+
+
+
+// calcolo il prezzo
+let prezzo = (km * prezzoKm * (1-(sconto/100)));
+console.log("prezzo:", prezzo);
+
 
 
 
 
 // output
-document.getElementById("eta").innerHTML = 
-`${eta}`;
 document.getElementById("km").innerHTML = 
-`${km}`;
+`${km} km`;
+document.getElementById("sconto").innerHTML = 
+`${sconto} %`;
+document.getElementById("eta").innerHTML = 
+`${eta} anni`;
+
+
 document.getElementById("prezzo").innerHTML = 
 `${prezzo.toFixed(2)}€`;
 
 // il toFixed dice quante cifre tenere
+
+
+if(sconto != 0){
+    let prezzoListino = km * prezzoKm;
+    
+    document.getElementById("prezzoListino").innerHTML = 
+    `${prezzoListino}€`;
+}
