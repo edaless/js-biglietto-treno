@@ -13,5 +13,50 @@ font-family: 'Roboto', sans-serif;
 }
 
 
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100vh;
 
+    /* background-image: url("https://img.ilgcdn.com/sites/default/files/styles/xl/public/foto/2021/12/02/1638462257-260725598-306855261307119-5990971065258073832-n.jpg?_=1638462257"); */
+    /* background-image: url("https://wallpaperaccess.com/full/147522.jpg"); */
+    background-image: url("https://cdn.wallpapersafari.com/36/70/XbheHB.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pannello{
+    /* var(--altezza) */
+    --altezza: 300px;
+    /* var(--larghezza) */
+    --larghezza: calc(var(--altezza) * 1.6180339887);
+    height: var(--altezza);
+    width: var(--larghezza);
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: calc(var(--altezza) / 20);
+
+    background-color: coral;
+}
+
+
+.bianco{
+    height: 70%;
+    width: 100%;
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    
+
+    background-color: rgb(255, 255, 255);
+}
 

@@ -10,3 +10,46 @@
 
 
 
+const prezzoKm = 0.21;
+const scontoMin = 0.8;
+const etaMin = 18;
+const scontoOver = 0.6;
+const etaOver = 65;
+
+
+// chiedo i km
+let km = parseInt( prompt("Di quanti km vuoi fare il viaggio?"));
+console.log("km:",km);
+
+// chiedo eta
+let eta = parseInt( prompt("Quanti anni hai?"));
+console.log("eta:",eta);
+
+
+// calcolo il prezzo di listino
+let prezzo = (km * prezzoKm);
+
+
+
+
+// sconto minorenne
+if(eta < etaMin){
+    prezzo = prezzo * scontoMin;
+}
+// sconto over
+if(eta >= etaOver){
+    prezzo = prezzo * scontoOver;
+}
+
+
+
+
+// output
+document.getElementById("eta").innerHTML = 
+`${eta}`;
+document.getElementById("km").innerHTML = 
+`${km}`;
+document.getElementById("prezzo").innerHTML = 
+`${prezzo.toFixed(2)}€`;
+
+// il toFixed dice quante cifre tenere
