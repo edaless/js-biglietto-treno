@@ -68,7 +68,6 @@ document.getElementById("eta").innerHTML =
 
 document.getElementById("prezzo").innerHTML = 
 `${prezzo.toFixed(2)}€`;
-
 // il toFixed dice quante cifre tenere
 
 
