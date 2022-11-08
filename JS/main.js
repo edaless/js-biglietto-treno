@@ -11,12 +11,18 @@
 
 
 const prezzoKm = 0.21;
+// €/km
 const scontoMin = 20;
+// %
 const etaMin = 18;
+// anni
 const scontoOver = 40;
+// %
 const etaOver = 65;
+// anni
 
 let sconto = 0;
+// %
 
 
 // chiedo i km
@@ -70,5 +76,5 @@ if(sconto != 0){
     let prezzoListino = km * prezzoKm;
     
     document.getElementById("prezzoListino").innerHTML = 
-    `${prezzoListino}€`;
+    `${prezzoListino.toFixed(2)}€`;
 }

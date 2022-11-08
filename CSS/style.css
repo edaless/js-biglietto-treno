@@ -115,7 +115,7 @@ font-family: 'Roboto', sans-serif;
 
 .red{
     color: red;
-    text-decoration: line-through;
+    text-decoration: line-through 3px;
     display: flex;
     justify-content: end;
     margin-right: 10px;
